@@ -14,21 +14,23 @@ body a {
 #header {
     background-color: #d52349;
     color: #fff;
-    padding: 1em 0;
+    padding: none;
 }
 
 #header a {
     padding: 0.5em 1em;
     background-color: #ece4e4;
     color: #d52349;
-    height: 2em;
+    height: auto;
+    font-size: 2em;
 }
 
 #header ul {
     display: flex;
     justify-content: flex-start;
     flex-wrap: wrap;
-    padding: 1em 2em;
+    padding: 0;
+    margin: 0;
 }
 
 /* banner */
