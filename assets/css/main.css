@@ -14,15 +14,25 @@ body a {
 #header {
     background-color: #d52349;
     color: #fff;
-    padding: none;
+    padding: 0;
+}
+
+#header .links {
+    display: flex;
+    justify-content: start;
 }
 
 #header a {
-    padding: 0.5em 1em;
+    padding: 16px 32px;
+    color: #ece4e4;
+    background-color: #d52349;
+    font-size: 2em;
+    height: auto;
+}
+
+#header a:hover {
     background-color: #ece4e4;
     color: #d52349;
-    height: auto;
-    font-size: 2em;
 }
 
 #header ul {
@@ -31,6 +41,17 @@ body a {
     flex-wrap: wrap;
     padding: 0;
     margin: 0;
+    list-style: none;
+}
+
+#header ul li {
+    display: inline-block;
+    list-style: none;
+}
+
+#header #logo {
+    margin: 0;
+    padding: 0;
 }
 
 /* banner */
