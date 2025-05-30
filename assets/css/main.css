@@ -20,18 +20,19 @@ body a {
 #header .links {
     display: flex;
     justify-content: start;
+    align-items: center;
 }
 
 #header a {
     padding: 16px 32px;
-    color: #ece4e4;
+    color: white;
     background-color: #d52349;
     font-size: 2em;
     height: auto;
 }
 
 #header a:hover {
-    background-color: #ece4e4;
+    background-color: white;
     color: #d52349;
 }
 
@@ -52,6 +53,11 @@ body a {
 #header #logo {
     margin: 0;
     padding: 0;
+}
+
+#logo img {
+    height: 60px;
+    width: auto;
 }
 
 /* banner */
@@ -87,3 +93,27 @@ body a {
             margin: 0;
             font-size: 1.5em;
         }
+
+@media (max-width: 768px) {
+  #header .links {
+    flex-direction: column;        /* Stack logo above links */
+    align-items: flex-start;       /* Keep nav links left-aligned */
+  }
+
+  #header ul {
+    flex-direction: row;           /* Keep nav links in a horizontal row */
+    flex-wrap: wrap;               /* Allow wrapping only if screen forces it */
+    justify-content: flex-start;   /* Keep them aligned left */
+    gap: 0.5em;
+  }
+
+  #header a {
+    font-size: 1.25em;             /* Slightly smaller, not tiny */
+    padding: 0.75em 1em;
+  }
+
+  #logo img {
+    height: 48px;
+  }
+}
+
