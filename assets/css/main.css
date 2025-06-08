@@ -1,6 +1,6 @@
-body  {
+body {
     font-family: 'Source Sans Pro', system-ui, -apple-system, BlinkMacSystemFont,
-               'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+                 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
     margin: 0;
     padding: 0;
 }
@@ -14,21 +14,22 @@ body a {
 #header {
     background-color: #d52349;
     color: #fff;
-    padding: 0;
 }
 
-#header .links {
+#header header { 
     display: flex;
-    justify-content: start;
+    justify-content: left; 
     align-items: center;
+    padding: none;
+    min-height: 60px;
+    flex-wrap: wrap;
 }
 
 #header a {
     padding: 16px 32px;
     color: white;
-    background-color: #d52349;
-    font-size: 2em;
-    height: auto;
+    font-size: 24px;
+    white-space: nowrap; 
 }
 
 #header a:hover {
@@ -38,16 +39,21 @@ body a {
 
 #header ul {
     display: flex;
-    justify-content: flex-start;
-    flex-wrap: wrap;
+    justify-content: flex-end; 
+    flex-wrap: wrap; 
     padding: 0;
     margin: 0;
+    border: none;
     list-style: none;
+    gap: 0; 
 }
 
 #header ul li {
-    display: inline-block;
-    list-style: none;
+    list-style: none; /* Redundant if already on ul */
+}
+
+#header ul li a {
+    display: block; 
 }
 
 #header #logo {
@@ -56,8 +62,9 @@ body a {
 }
 
 #logo img {
-    height: 60px;
+    height: 63px;
     width: auto;
+    display: block; 
 }
 
 /* banner */
@@ -72,48 +79,47 @@ body a {
     margin: auto;
 }
 
-        #banner header {
-        background-color: rgba(34, 30, 31, 0.9);
-        display: inline-block;
-        padding: 2.5em 5em;
-        border-radius: 5px;
-    }
-
-        #banner header h2 {
-            color: #fff;
-            font-weight: 700;
-            font-size: 2.5em;
-            margin: 0 0 0.65em 0;
-        }
-
-        #banner header p {
-            color: #d52349;
-            padding: 0;
-            font-style: normal;
-            margin: 0;
-            font-size: 1.5em;
-        }
-
-@media (max-width: 768px) {
-  #header .links {
-    flex-direction: column;        /* Stack logo above links */
-    align-items: flex-start;       /* Keep nav links left-aligned */
-  }
-
-  #header ul {
-    flex-direction: row;           /* Keep nav links in a horizontal row */
-    flex-wrap: wrap;               /* Allow wrapping only if screen forces it */
-    justify-content: flex-start;   /* Keep them aligned left */
-    gap: 0.5em;
-  }
-
-  #header a {
-    font-size: 1.25em;             /* Slightly smaller, not tiny */
-    padding: 0.75em 1em;
-  }
-
-  #logo img {
-    height: 48px;
-  }
+#banner header {
+    background-color: rgba(34, 30, 31, 0.9);
+    display: inline-block;
+    padding: 2.5em 5em;
+    border-radius: 5px;
 }
 
+#banner header h2 {
+    color: #fff;
+    font-weight: 700;
+    font-size: 2.5em;
+    margin: 0 0 0.65em 0;
+}
+
+#banner header p {
+    color: #d52349;
+    padding: 0;
+    font-style: normal;
+    margin: 0;
+    font-size: 1.5em;
+}
+
+@media (max-width: 768px) {
+    #header header { 
+        flex-direction: column; 
+        align-items: center; 
+    }
+
+    #header ul {
+        flex-direction: row; 
+        flex-wrap: wrap; 
+        justify-content: center; 
+        width: 100%; 
+    }
+
+    #header ul li a {
+        font-size: 1em;
+        padding: 10px 20px;
+    }
+
+    #logo img {
+        height: 48px;
+    }
+}
